@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick/slick.css">
+  <style>
+    .slider {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    /* Untuk mengatur tampilan slide yang aktif */
+    .slide.active {
+      display: block;
+    }
+
+    /* Kotak untuk setiap slide */
+    .slide-card {
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px; /* Sesuaikan jarak antar slide di sini */
+    }
+    
+    /* Konten pada setiap slide */
+    .slide-content {
+      text-align: center;
+    }
+    
+    .slide-content h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .slide-content p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    
+    .slide-content button {
+      background-color: #ccc;
+      border: none;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Tombol prev dan next */
+    .arrow-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .prev {
+      left: 10px;
+    }
+    
+    .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slide">
+      <div class="slide-card">
+        <div class="slide-content">
+          <h3>Pengenalan Multimedia</h3>
+          <p>Konsep multimedia adalah berisi unsur text, suara, gambar, animasi, dan video yang digunakan untuk menjelaskan sesuatu agar jelas...</p>
+          <button>Read More</button>
+        </div>
+      </div>
+      <div class="slide-card">
+        <div class="slide-content">
+          <h3>Desain Grafis</h3>
+          <p>Desain grafis adalah seni dan praktik menggabungkan teks dan gambar untuk mengkomunikasikan ide. Desain grafis dapat diterapkan pada berbagai media seperti poster, brosur, situs web, dan lain-lain...</p>
+          <button>Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-card">
+        <div class="slide-content">
+          <h3>Pemrograman Web</h3>
+          <p>Pemrograman web adalah proses membuat dan mengembangkan situs web. Hal ini melibatkan penggunaan berbagai bahasa pemrograman seperti HTML, CSS, dan JavaScript...</p>
+          <button>Read More</button>
+        </div>
+      </div>
+      <div class="slide-card">
+        <div class="slide-content">
+          <h3>Pengembangan Aplikasi Mobile</h3>
+          <p>Pengembangan aplikasi mobile adalah proses membuat aplikasi yang dapat dijalankan di perangkat mobile seperti smartphone dan tablet. Biasanya melibatkan penggunaan bahasa pemrograman seperti Java, Kotlin, atau Swift...</p>
+          <button>Read More</button>
+        </div>
+      </div>
+    </div>
+    <button class="arrow-button prev">&larr;</button>
+    <button class="arrow-button next">&rarr;</button>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+
+      // Tombol prev
+      $('.prev').click(function(){
+        $('.slider').slick('slickPrev');
+      });
+
+      // Tombol next
+      $('.next').click(function(){
+        $('.slider').slick('slickNext');
+      });
+    });
+  </script>
+</body>
+</html>
