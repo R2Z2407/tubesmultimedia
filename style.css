@@ -207,9 +207,115 @@ header{
 }
 /*About*/
 .About {
-    height: 640px;
+    height: 320px;
+    width: auto;
+    display:inline-flex;
     -ms-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
+}
+.photo {
+    display: inline;
+    height: 310px;
+    width: 20%;
+    background-color: var(--main-color);
+    transform: translate(50%, 0%);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.pas-photo {
+    margin: 10px 10px 10px 10px;
+    height: 290px;
+    border-radius: 20%;
+    overflow: hidden;
+    transition: transform 0.1s ease-out 0.1s;
+}
+.pas-photo:hover{
+    transform: translateX(-20px) translateY(-30px);
+    border-radius: 0%;
+}
+.photo .pas-photo img{
+    width: 100%;
+    margin-top: -20%;
+}
+.Bio {
+    display: inline;
+    height: 310px;
+    padding: 20px 20px 20px 20px;
+    width: 57.5%;
+    background-color: var(--main-color);
+    transform: translate(21%, 0%);
+    border-radius: 20px;
+    align-items: center;
+    text-align: justify;
+    overflow: hidden;
+}
+.Bio p{
+    font-size: large;
+    line-height: 2;
+    font-weight: bold;
+}
+.Bio li{
+    display: list-item;
+    list-style-type:disc;
+    transform: translate(2.5%, 0%);
+}
+.About-Result {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 8%;
+    height: 330px;
+    width: 100%;
+}
+.Result-Detail{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 7px;
+    padding-right: 16px;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    top: 50%;
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+}
+.slide-content2{
+    background-color: var(--main-color);
+    border-radius: 10px;
+    margin-left: 10px;
+    width: 80%;
+}
+.detail2 {
+    align-items: center;
+    text-align: center;
+    color: var(--second-bg-color);
+}
+.detail2 h2{
+    margin-top: 10px;
+}
+.detail2 button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--second-bg-color);
+    background-color: var(--second-color);
+    font-weight: bold;
+}
+.image {
+    height: 150px;
+    width: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.1s ease-out 0.1s;
+}
+.image:hover{
+    transform: translateX(-20px) translateY(-30px);
+    border-radius: 0%;
+}
+.image img{
+    width: 100%;
 }
 /*Footer*/
 footer{
